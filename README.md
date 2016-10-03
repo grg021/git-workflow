@@ -52,11 +52,11 @@
 5. Add release notes (you can also do this in the repo e.g. bitbucket)
 
 ## Hotfix
-1. Branch off from release tag that you want to fix e.g. `hotfix/2.0.1`
+1. Branch off from release tag that you want to fix
     
     ```
     git checkout 1.0.0
-    git 
+    git checkout hotfix/2.0.1
     ```
 2. Commit hot fix
 3. Once ready, tag top of branch e.g. `2.0.1` to create new release and merge into master
