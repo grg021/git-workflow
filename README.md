@@ -11,13 +11,11 @@
     git checkout -b feature/new-feature 
     ```
 2. Rebase often to keep code in-sync
-  * using terminal
   
       ``` 
       git fetch
       git rebase origin/master
       ```
-  * to simplify syncing try using the ff. script https://gist.github.com/miguelgonz/9fc4cb57c07c52e5f980
 3. When ready, push branch to remote
 
     ``` 
