@@ -18,7 +18,6 @@
 1. branch out from release tag that you want to fix e.g. `hotfix/2.0.1`
 2. commit hot fix
 3. once ready, tag top of branch e.g. `2.0.1` to create new release and merge into master
-
 4. delete hotfix branch
 
 ## Resources
