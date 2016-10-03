@@ -16,11 +16,9 @@
       git rebase origin/master
       ```
   * to simplify syncing try using the ff. script https://gist.github.com/miguelgonz/9fc4cb57c07c52e5f980
-3. When ready, rebase and push branch to remote
+3. When ready, push branch to remote
 
     ``` 
-    git fetch
-    git rebase origin/master
     git push -u origin feature/new-feature 
     ```
 4. Create a pull request
