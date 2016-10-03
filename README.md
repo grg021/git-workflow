@@ -7,7 +7,9 @@
     * hot fix - `hotfix/<version>`
     * release - `release/<version>`
     
-    ``` git checkout -b feature/new-feature ```
+    ``` 
+    git checkout -b feature/new-feature 
+    ```
 2. Rebase often to keep code in-sync
   * using terminal
   
@@ -21,18 +23,41 @@
     ``` 
     git push -u origin feature/new-feature 
     ```
-4. Create a pull request
+4. Create a pull request (https://goo.gl/qXJ4s4)
 5. Once merged to master, delete feature branch on local
 
 ## Release
-1. Branch off a point in master e.g. checkout specific commit #
-2. Once ready, tag top of branch e.g. `1.0.0` to create new release and merge into `master`
+1. Branch off a point in master
+
+    ```
+    git checkout -b release/1.0.0
+    ```
+2. Once ready, tag top of branch to create new release and merge into `master`
+
+    ```
+    git tag 1.0.0
+    git checkout master
+    git merge release/1.0.0
+    ```
 3. Push to `origin/master` including the tag
+
+    ```
+    git push origin master --tags
+    ```
 4. Delete `release` branch
+
+    ```
+    git branch -d <branch_name>
+    ```
 5. Add release notes (you can also do this in the repo e.g. bitbucket)
 
 ## Hotfix
 1. Branch off from release tag that you want to fix e.g. `hotfix/2.0.1`
+    
+    ```
+    git checkout 1.0.0
+    git 
+    ```
 2. Commit hot fix
 3. Once ready, tag top of branch e.g. `2.0.1` to create new release and merge into master
 4. Delete hotfix branch
