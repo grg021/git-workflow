@@ -10,6 +10,7 @@
     ``` git checkout -b feature/new-feature ```
 2. Rebase often to keep code in-sync
   * using terminal
+  
       ``` 
       git fetch
       git rebase origin/master
