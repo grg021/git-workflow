@@ -19,3 +19,7 @@
 3. once ready, tag top of branch e.g. 2.0.1 to create new release and merge into master
 4. delete hotfix branch
 
+## Resources
+* https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
+* http://endoflineblog.com/gitflow-considered-harmful
+* http://endoflineblog.com/follow-up-to-gitflow-considered-harmful
