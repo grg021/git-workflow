@@ -6,13 +6,17 @@
     * bug fix - `bugfix/<issue #>-<fix-desc>`
     * hot fix - `hotfix/<version>`
     * release - `release/<version>`
+    
+    ``` git checkout -b feature/new-feature ```
 2. Rebase often to keep code in-sync
   * if you are using phpstorm - you can simply use `cmd + t` and set to rebase and stash
 ![Alt text](/img/img1.png?raw=true "PHP Storm SYNC")
   * using terminal - simplify syncing by using the ff. script https://gist.github.com/miguelgonz/9fc4cb57c07c52e5f980
-3. When ready, merge changes to `master` branch
-4. Push `origin/master` including tags
-5. Delete create branch
+3. When ready, push branch to remote
+
+    ``` git push -u origin feature/new-feature ```
+4. Create a pull request
+5. Once merged to master, delete feature branch
 
 ## Release
 1. Branch off a point in master e.g. checkout specific commit #
