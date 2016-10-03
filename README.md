@@ -9,14 +9,21 @@
     
     ``` git checkout -b feature/new-feature ```
 2. Rebase often to keep code in-sync
-  * if you are using phpstorm - you can simply use `cmd + t` and set to rebase and stash
-![Alt text](/img/img1.png?raw=true "PHP Storm SYNC")
-  * using terminal - simplify syncing by using the ff. script https://gist.github.com/miguelgonz/9fc4cb57c07c52e5f980
-3. When ready, push branch to remote
+  * using terminal
+      ``` 
+      git fetch
+      git rebase origin/master
+      ```
+  * to simplify syncing try using the ff. script https://gist.github.com/miguelgonz/9fc4cb57c07c52e5f980
+3. When ready, rebase and push branch to remote
 
-    ``` git push -u origin feature/new-feature ```
+    ``` 
+    git fetch
+    git rebase origin/master
+    git push -u origin feature/new-feature 
+    ```
 4. Create a pull request
-5. Once merged to master, delete feature branch
+5. Once merged to master, delete feature branch on local
 
 ## Release
 1. Branch off a point in master e.g. checkout specific commit #
@@ -36,3 +43,4 @@
 * https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
 * http://endoflineblog.com/gitflow-considered-harmful
 * http://endoflineblog.com/follow-up-to-gitflow-considered-harmful
+* https://www.atlassian.com/git/tutorials/comparing-workflows
