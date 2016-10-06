@@ -24,6 +24,8 @@
 4. Create a pull request (https://goo.gl/qXJ4s4)
 5. Once merged to master, delete feature branch on local
 
+Visual Diagram - https://guides.github.com/pdfs/githubflow-online.pdf
+
 ## Release
 1. Branch off a point in master
 
