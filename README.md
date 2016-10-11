@@ -63,6 +63,41 @@ Visual Diagram - https://guides.github.com/pdfs/githubflow-online.pdf
 4. Delete hotfix branch
 5. add release notes (you can also do this in the repo e.g. bitbucket)
 
+## Resolving Stale Pull Requests
+A "stale" pull request is one that is no longer up to date with the main line of development e.g. master branch, and it needs to be updated before it can be merged into the project. 
+
+The most common reason why pull requests go stale is due to conflicts: if two pull requests both modify similar lines in the same file, and one pull request gets merged, the unmerged pull request will now have a conflict. 
+
+Sometimes, a pull request can go stale without conflicts: perhaps the branch was created when someone had accidentally merged failing unit tests to the master branch. Regardless of the reason, if your pull request has gone stale, you will need to rebase your branch onto the latest version of the master branch before it can be merged.
+
+1. fetch latest changes in remote and sync local branch w/ remote
+
+   ```
+   git fetch origin
+   git checkout feature/x
+   git pull origin feature/x
+   ```
+2. start to rebase feature branch (make sure you are in feature branch)
+
+   ```
+   git rebase
+   ```
+3. During this time, you will likely see messages such as conflicts in files. If this happens you need to resolve those conflicts and continue to rebase.
+   
+   ```
+   vi file # edit file w/ conflict to resolve
+   git add . # add back file
+   git rebase --continue # continue to rebase
+   ```
+Just a side note, if you are using phpstorm resolving conflicts can be done by right-clicking on the file, hover to "git" and select "resolve conflict"
+
+4. Once done w/ rebasing, push back changes to remote
+
+   ```
+   git push origin feature/x --force
+   ```
+5. Proceed w/ the pull request as is
+
 ## Resources
 * https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
 * http://endoflineblog.com/gitflow-considered-harmful
